@@ -343,3 +343,133 @@ a {
     font-size: 0.9rem;
     color: #aaa;
 }
+/* --- Estilos para Páginas de Conteúdo Interno --- */
+
+.page-content {
+    padding: 60px 20px; /* Espaçamento vertical e horizontal */
+    max-width: 800px; /* Define uma largura máxima para o texto ficar mais legível */
+    margin: 0 auto; /* Centraliza o container de conteúdo */
+    background-color: #fff;
+    min-height: 60vh;
+}
+
+.page-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.page-content p {
+    font-size: 1.1rem;
+    line-height: 1.7; /* Espaçamento entre as linhas para melhor leitura */
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.page-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+/* --- Estilos para a Seção "Sobre o Artista" --- */
+
+.artist-info {
+    display: flex; /* Ativa o Flexbox para organizar os filhos */
+    gap: 30px; /* Espaçamento entre a imagem e o texto */
+    align-items: flex-start; /* Alinha os itens no topo */
+    margin-bottom: 40px; /* Espaçamento abaixo desta seção */
+}
+
+.artist-image {
+    width: 400px; /* Largura fixa para a imagem */
+    height: auto;
+    border-radius: 8px;
+}
+
+.artist-text {
+    flex: 1; /* O texto ocupará o espaço restante */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .artist-info {
+        flex-direction: column; /* Empilha a imagem e o texto em telas menores */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .artist-image {
+        width: 100%; /* A imagem ocupa a largura total em telas menores */
+        margin-bottom: 20px;
+    }
+}
+/* --- Estilos da Página de Coleções --- */
+
+.collection-page-section {
+    padding: 60px 0;
+}
+
+.collection-page-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    text-align: center;
+}
+
+.collection-grid {
+    display: grid;
+    /* Usaremos 2 colunas em telas maiores, e 1 em telas menores */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.collection-card {
+    position: relative; /* Essencial para o posicionamento do texto sobre a imagem */
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 350px; /* Altura fixa para os cards ficarem uniformes */
+}
+
+.collection-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço sem distorcer */
+    transition: transform 0.4s ease;
+}
+
+.collection-card:hover img {
+    transform: scale(1.1); /* Efeito de zoom na imagem ao passar o mouse */
+}
+
+/* Camada escura sobre a imagem */
+.collection-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo preto semi-transparente */
+    
+    /* Centraliza o texto vertical e horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.collection-card:hover .collection-card-overlay {
+    background-color: rgba(0, 0, 0, 0.2); /* Sobreposição fica mais clara no hover */
+}
+
+.collection-card-overlay h3 {
+    color: #ffffff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para legibilidade */
+}
