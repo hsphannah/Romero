@@ -23,7 +23,7 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="arte.html">ARTE</a></li>
-                    <li><a href="produtos.html">PRODUTOS</a></li>
+                    <li><a href="produto-detalhe.html">PRODUTOS</a></li>
                     <li><a href="colecoes.html">COLEÇÕES</a></li>
                     <li><a href="sobre.html">SOBRE</a></li>
                 </ul>
@@ -35,45 +35,46 @@
                 <a href="#" aria-label="Carrinho de Compras">Carrinho</a>
             </div>
         </div>
-    </header>
-    <main>
-        <section class="collection-page-section">
-    <div class="container">
-        <h2>Nossas Coleções</h2>
-        <div class="collection-grid">
+        <main>
+    <div class="container product-detail-container">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="https://placehold.co/600x600/E8D254/333?text=Arte+1" alt="Vista principal da obra Abraço Colorido" id="mainProductImage">
+            </div>
+            <div class="thumbnail-images">
+                <img src="https://placehold.co/100x100/E8D254/333?text=Thumb+1" alt="Thumbnail 1" class="thumbnail active">
+                <img src="https://placehold.co/100x100/E8D254/999?text=Detalhe" alt="Thumbnail 2" class="thumbnail">
+                <img src="https://placehold.co/100x100/E8D254/ccc?text=Ambiente" alt="Thumbnail 3" class="thumbnail">
+            </div>
+        </div>
+
+        <div class="product-info">
+            <h1>Abraço Colorido</h1>
+            <p class="product-detail-price">R$ 499,90</p>
             
-            <a href="#" class="collection-card">
-                <img src="https://placehold.co/600x400/f83bff/fff?text=Coleção+Romance" alt="Coleção Romance">
-                <div class="collection-card-overlay">
-                    <h3>Coleção Romance</h3>
+            <form class="product-form">
+                <div class="quantity-selector">
+                    <label for="quantity">Quantidade:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1">
                 </div>
-            </a>
+                <button type="submit" class="add-to-cart-btn">Adicionar ao Carrinho</button>
+            </form>
 
-            <a href="#" class="collection-card">
-                <img src="https://placehold.co/600x400/21c9ff/fff?text=Coleção+Yoga" alt="Coleção Yoga">
-                <div class="collection-card-overlay">
-                    <h3>Coleção Yoga</h3>
-                </div>
-            </a>
-
-            <a href="#" class="collection-card">
-                <img src="https://placehold.co/600x400/E8D254/333?text=Coleção+Urbana" alt="Coleção Urbana">
-                <div class="collection-card-overlay">
-                    <h3>Coleção Urbana</h3>
-                </div>
-            </a>
-
-            <a href="#" class="collection-card">
-                <img src="https://placehold.co/600x400/7B68EE/fff?text=Clássicos" alt="Coleção Clássicos">
-                <div class="collection-card-overlay">
-                    <h3>Clássicos</h3>
-                </div>
-            </a>
-
+            <div class="product-description">
+                <h3>Descrição</h3>
+                <p>Esta obra vibrante é uma celebração da alegria e do amor, capturada através de cores ousadas e formas dinâmicas que são a marca registrada do artista. Perfeita para adicionar um ponto de cor e energia a qualquer ambiente.</p>
+                <h4>Detalhes</h4>
+                <ul>
+                    <li>Técnica: Serigrafia sobre tela</li>
+                    <li>Dimensões: 50cm x 50cm</li>
+                    <li>Ano: 2024</li>
+                    <li>Assinada pelo artista</li>
+                </ul>
+            </div>
         </div>
     </div>
-</section>
-    </main>
+</main>
+    </header>
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">

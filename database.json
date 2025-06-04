@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "name": "Abraço Colorido",
+    "price": 499.90,
+    "image": "https://placehold.co/300x400/E8D254/333?text=Arte+1",
+    "category": "produto",
+    "description": "Esta obra vibrante é uma celebração da alegria e do amor, capturada através de cores ousadas e formas dinâmicas que são a marca registrada do artista. Perfeita para adicionar um ponto de cor e energia a qualquer ambiente.",
+    "details": [
+      "Técnica: Serigrafia sobre tela",
+      "Dimensões: 50cm x 50cm",
+      "Ano: 2024",
+      "Assinada pelo artista"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Gato Pop",
+    "price": 799.90,
+    "image": "https://placehold.co/300x400/54E89E/333?text=Arte+2",
+    "category": "produto",
+    "description": "Uma representação lúdica e moderna de um dos animais mais amados, o gato. Com traços fortes e cores contrastantes, esta peça é um ícone do estilo pop art.",
+    "details": [
+      "Técnica: Impressão Giclée",
+      "Dimensões: 60cm x 60cm",
+      "Ano: 2024",
+      "Edição limitada"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Coração Radiante",
+    "price": 1200.00,
+    "image": "https://placehold.co/300x400/54A1E8/333?text=Arte+3",
+    "category": "produto",
+    "description": "O símbolo universal do amor interpretado com uma explosão de cores e otimismo. Uma peça central que irradia boas energias.",
+    "details": [
+      "Técnica: Serigrafia sobre tela",
+      "Dimensões: 70cm x 70cm",
+      "Ano: 2025",
+      "Assinada pelo artista"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Amor em Tela",
+    "price": 15000.00,
+    "image": "https://placehold.co/300x400/FF6347/fff?text=Original+I",
+    "category": "arte",
+    "description": "Uma pintura original que explora as profundezas da conexão humana através de um balé de cores e formas. Peça única.",
+    "details": [
+      "Técnica: Óleo sobre tela",
+      "Dimensões: 100cm x 120cm",
+      "Ano: 2023",
+      "Peça única, assinada"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Sinfonia Azul",
+    "price": null,
+    "price_text": "Sob Consulta",
+    "image": "https://placehold.co/300x400/4682B4/fff?text=Original+II",
+    "category": "arte",
+    "description": "Uma imersão em tons de azul, esta obra evoca a calma e a imensidão do oceano e do céu. Uma meditação visual.",
+    "details": [
+      "Técnica: Acrílico sobre tela",
+      "Dimensões: 150cm x 100cm",
+      "Ano: 2024",
+      "Peça única"
+    ]
+  }
+]
