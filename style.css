@@ -1,0 +1,345 @@
+/* --- Reset Básico e Estilos Gerais --- */
+body {
+    margin: 0; /* Remove a margem padrão do navegador */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f9f9f9; /* Um cinza bem claro para o fundo */
+}
+
+a {
+    text-decoration: none; /* Remove o sublinhado de todos os links */
+    color: #333; /* Cor de texto padrão para os links */
+}
+
+/* --- Estilos do Cabeçalho --- */
+.main-header {
+    background-color: #ffffff; /* Fundo branco para o cabeçalho */
+    padding: 15px 0; /* Espaçamento interno em cima e embaixo */
+    border-bottom: 1px solid #e0e0e0; /* Linha sutil para separar do conteúdo */
+    position: sticky; /* Faz o cabeçalho ficar fixo no topo */
+    top: 0;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+/* Container para centralizar o conteúdo */
+.main-header .container {
+    max-width: 1280px; /* Largura máxima do conteúdo do cabeçalho */
+    margin: 0 auto; /* Centraliza o container na página */
+    padding: 0 20px; /* Espaçamento nas laterais para não colar nas bordas */
+    
+    /* A MÁGICA DO LAYOUT: FLEXBOX */
+    display: flex;
+    justify-content: space-between; /* Espaça os itens: logo na esquerda, menu no meio, ícones na direita */
+    align-items: center; /* Alinha todos os itens verticalmente ao centro */
+}
+
+
+/* --- Estilos do Logo, Navegação e Ícones --- */
+
+.header-logo a {
+    font-size: 1.5rem; /* Tamanho da fonte do logo */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+/* Estilizando a lista do menu */
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Remove os pontos da lista */
+    display: flex; /* Coloca os itens do menu lado a lado */
+    gap: 30px; /* Espaçamento entre os itens do menu */
+}
+
+/* Estilizando os links do menu */
+.main-nav a {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase; /* Coloca o texto em maiúsculas, como na referência */
+    transition: color 0.2s ease-in-out; /* Efeito suave na mudança de cor */
+}
+
+/* Efeito ao passar o mouse sobre o link */
+.main-nav a:hover {
+    color: #ff007f; /* Uma cor vibrante, inspirada no Britto, para o hover */
+}
+
+/* Container para os ícones */
+.header-icons {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os ícones */
+}
+
+.header-icons a {
+    font-size:
+}
+/* --- Estilos do Menu Hambúrguer e Responsividade --- */
+
+/* Estilo do botão hambúrguer */
+.hamburger-btn {
+    display: none; /* Escondido por padrão em telas grandes */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1010; /* Para ficar acima do menu */
+}
+
+.hamburger-btn .line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* MEDIA QUERY: Estilos para telas pequenas (Tablets e Celulares) */
+@media (max-width: 768px) {
+
+    /* Mostra o botão hambúrguer */
+    .hamburger-btn {
+        display: block;
+    }
+
+    /* Esconde os ícones para simplificar (opcional, mas comum) */
+    .header-icons {
+        display: none;
+    }
+
+    /* Estiliza o menu de navegação para o modo mobile */
+    .main-nav {
+        position: fixed; /* Fica fixo na tela */
+        top: 0;
+        right: -100%; /* Começa escondido fora da tela, à direita */
+        width: 80%; /* Ocupa 80% da largura da tela */
+        height: 100vh; /* Ocupa 100% da altura da tela */
+        background-color: #ffffff;
+        padding-top: 80px;
+        transition: right 0.4s ease-in-out;
+        z-index: 1000; /* Fica acima do conteúdo, mas abaixo do botão de fechar */
+    }
+    
+    /* Classe que será adicionada via JavaScript para mostrar o menu */
+    .main-nav.menu-open {
+        right: 0; /* Move o menu para dentro da tela */
+    }
+
+    /* Ajusta a lista de links para ficar vertical */
+    .main-nav ul {
+        flex-direction: column; /* Links um abaixo do outro */
+        align-items: center; /* Centraliza os links */
+        width: 100%;
+        gap: 20px;
+    }
+    
+    .main-nav a {
+        font-size: 1.2rem;
+    }
+}
+/* --- Estilos da Seção do Banner Principal (Hero) --- */
+
+.hero-section {
+    /* Usaremos um gradiente como fundo temporário. Você pode trocar por uma imagem. */
+    background-image: linear-gradient(45deg, #f83bff, #21c9ff);
+    /* Para usar uma imagem, comente a linha acima e use a linha abaixo: */
+    /* background-image: url('caminho-para-sua-imagem.jpg'); */
+    
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+
+    color: #ffffff; /* Cor do texto será branca */
+    text-align: center; /* Alinha todo o texto ao centro */
+    
+    padding: 100px 20px; /* Espaçamento interno grande */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh; /* Altura mínima de 60% da altura da tela */
+}
+
+.hero-content {
+    max-width: 600px; /* Largura máxima para o conteúdo de texto */
+}
+
+.hero-content h1 {
+    font-size: 3rem; /* Tamanho de fonte grande para o título */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto para legibilidade */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do botão de Chamada para Ação (CTA) */
+.cta-button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #333;
+    padding: 15px 30px;
+    border-radius: 50px; /* Botão arredondado */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05); /* Efeito de leve aumento ao passar o mouse */
+}
+
+/* Ajuste de fonte para telas menores */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+/* --- Estilos da Seção da Grade de Produtos --- */
+
+.product-grid-section {
+    padding: 60px 0; /* Espaçamento vertical */
+    text-align: center;
+}
+
+.product-grid-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* O container da grade - A MÁGICA DO CSS GRID */
+.product-grid {
+    display: grid;
+    /* Cria colunas responsivas: o navegador tentará criar colunas de no mínimo 280px.
+       Se não couber, ele quebra a linha automaticamente. */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Espaço entre os cards */
+    
+    /* Centraliza a grade na página */
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* --- Estilos do Card de Produto --- */
+
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px; /* Cantos arredondados */
+    overflow: hidden; /* Garante que a imagem não "vaze" dos cantos arredondados */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px); /* Efeito de "levantar" o card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* A imagem dentro do card */
+.product-card img {
+    width: 100%;
+    height: auto;
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+/* Estilos do conteúdo de texto do card */
+.product-card h3,
+.product-card .product-price,
+.product-card .product-button {
+    padding: 0 20px; /* Espaçamento lateral para o conteúdo */
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 20px 0 10px;
+}
+
+.product-card .product-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #007bff; /* Cor de destaque para o preço */
+    margin-bottom: 20px;
+}
+
+.product-card .product-button {
+    display: inline-block; /* Para o padding funcionar corretamente */
+    width: calc(100% - 40px); /* Ocupa toda a largura, menos o padding */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.product-card:hover .product-button {
+    background-color: #ff007f; /* Muda a cor do botão no hover do card */
+}
+/* --- Estilos do Rodapé (Footer) --- */
+
+.main-footer {
+    background-color: #222; /* Fundo escuro */
+    color: #ccc; /* Cor do texto clara */
+    padding: 50px 0 0; /* Espaçamento interno, sem padding embaixo por causa do footer-bottom */
+}
+
+/* Container do conteúdo principal do rodapé */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Espaça as colunas igualmente */
+    flex-wrap: wrap; /* Permite que as colunas quebrem linha em telas menores */
+    gap: 30px; /* Espaço entre as colunas quando elas quebram a linha */
+    padding-bottom: 40px;
+}
+
+.footer-column {
+    flex: 1; /* Faz com que as colunas tentem ocupar o mesmo espaço */
+    min-width: 200px; /* Largura mínima para cada coluna antes de quebrar */
+}
+
+.footer-column h4 {
+    color: #ffffff; /* Títulos em branco para maior destaque */
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #ccc; /* Cor padrão dos links */
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff; /* Links ficam brancos ao passar o mouse */
+    text-decoration: underline;
+}
+
+/* Barra inferior do rodapé com o copyright */
+.footer-bottom {
+    border-top: 1px solid #444; /* Linha sutil de separação */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+}
